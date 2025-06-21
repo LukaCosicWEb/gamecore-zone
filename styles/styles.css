@@ -1,0 +1,207 @@
+/* ✅ Make footer stay at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Verdana', sans-serif;
+  color: white;
+  background-color: #23006e;
+}
+
+main {
+  flex: 1;
+}
+
+/* ✅ Header */
+header {
+  background-color: #021638;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  line-height: 50px;
+  padding: 25px 0;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 2em;
+}
+
+/* ✅ Navigation */
+nav {
+  margin: 15px 0;
+}
+
+nav a {
+  background-color: #330066;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #6600cc;
+}
+
+/* ✅ Section Titles */
+.section-title {
+  background-color: #4d8af0;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* ✅ Products */
+.products-section .product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  text-align: center;
+  max-width: 200px;
+  background-color: #330066;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ccc;
+  color: #23006e;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* ✅ Gallery */
+.gallery-section {
+  width: 50%;
+  margin: 0 auto; /* Center it */
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery-section .gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-row img {
+  height: 100px;
+  border-radius: 8px;
+}
+
+.gallery-caption {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+/* ✅ Contact */
+.contact-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-form {
+  background-color: #4d8af0;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ✅ Footer */
+footer {
+  background-color: #4d8af0;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .gallery-section {
+    width: 90%;
+  }
+}
+
+@media (min-width: 601px) {
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .product-card {
+    flex: 0 0 calc(33.33% - 40px);
+  }
+}
